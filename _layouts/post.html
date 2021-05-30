@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div id="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <!-- <h1>
+    <span class="post-title">{{ page.title }}</span>
+    <span class="post-date">{{ page.date | date: "%Y-%m-%d" }}</span>
+  </h1> -->
+  <!-- Prefix any url referencing to an asset with base url.
+       THis is required if the site is hosted on GitHub. -->
+  {% assign assets_url = site.baseurl | append: "/assets" %}
+  {{ content | replace: "/assets", assets_url }}
+</div>
+
+<!-- <div id="related">
+  <h2>{{ site.post_footer }}</h2>
+  <ul class="posts">
+    {% for post in site.related_posts limit:3 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div> -->
