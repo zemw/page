@@ -1,10 +1,10 @@
-# Credit Spread and Financial Crisis
+# Credit spread and financial crisis
 
 > This is the 1-minute summary of Krishnamurthy and Muir (2017): 
 How Credit Cycles across a Financial Crisis
 ([Link](https://www.nber.org/system/files/working_papers/w23850/w23850.pdf))
 
-**The FZ-theory of Crisis**
+### The FZ-theory of crisis
 
 A sizable shock to a fragile financial sector results in a financial crisis 
 with bank runs, credit crunch as well as output contraction.
@@ -15,7 +15,7 @@ with bank runs, credit crunch as well as output contraction.
 Normalizing the spreads: dividing the credit spread by the average spread for 
 that country: $$s_{i,t}=Spread_{i,t}/\overline{Spread_i}$$
 
-**Crisis and Aftermath**
+### Crisis and aftermath
 
 Insights from event study:
 
@@ -57,7 +57,7 @@ that annual credit growth has excced its full sample medium.
 - Unconditional path of GDP following a spread spike: 1% lower
 - Conditioned on HighCredit, GDP following a spread spike: 2.5% lower
 
-**Pre-crisis Period**
+### Pre-crisis Period
 
 Crisis are preceded by *frothy* credit-market conditions (high credit 
 growth coupled with low risk perception).
