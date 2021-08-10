@@ -1,6 +1,6 @@
-# Why Macroeconomists do not care about causal effect?
+# Why macroeconomists do not care about causal effect?
 
-When I present time series studies to applied micro economists, one question 
+When I present time series studies to applied microeconomists, one question 
 that always haunts me is how can I identity the causal effect?
 Since economic variables are always interdependent, without random assignment,
 how do I know it is the effect of variable X but not Y?
@@ -10,8 +10,8 @@ I felt embarrassing each time I was asked this question.
 I could only fob it off with something like: 
 because they are different kinds of studies.
 
-But I know that's not the answer. The question makes perfect sense. 
-But it is just not the interest of most time series studies. 
+But I know that's not the answer. The question makes sense. 
+But it is just not the interest of time series studies. 
 I am here to give you a good reason for that excuse. 
 
 **Micro and macro**
@@ -23,7 +23,7 @@ large scale randomization. For example, to identify the effect of a vaccine,
 the research would involve a large number of participants. Some of them are 
 randomly selected to be vaccined; others receive placebo treatment. 
 So there is no different on average between the treatment and the control 
-groups except the treatment -- vaccination. 
+groups except the treatment itself -- vaccination. 
 In such setting, the different outcome between the two groups must be attributed 
 to the causal effect of the vaccination. 
 
@@ -59,7 +59,7 @@ effect of the interest rate, not other economic variables? Maybe there are varia
 working behind the scene that affect both interest rate and GDP growth. 
 Even if we could isolate unexpected policy shock (interest rate shocks orthogonal 
 to economic fundamentals), how do we know there is no missing variables? 
-Maybe there are other sources of causes that bring about the same outcome. 
+Maybe there are other causes that bring about the same outcome. 
 Therefore, "dynamic causal effect" is not the escape. 
 Our essential question remains unsolved. 
 
@@ -83,7 +83,7 @@ the desirable outcome.
 But in some applications, the two types of causality mean completely different things. 
 For example, a randomized experiment may report one more year education increases 
 students' job market income by 7 percent. Even if the experiment is perfectly random, 
-we cannot rely on the result to make decisions: tell your kids to get more education 
+we cannot rely on the result to make decisions: telling your kids to get more education 
 does not guarantee them better income in the future. The decisions, of course, 
 have to be made case by case, depending on personal characters.
 In such applications, the results from the randomized experiments have little value
@@ -106,7 +106,7 @@ It is no more than an exquisite description of a tiny piece of historical event.
 **Towards generalizable theories**
 
 Now we are ready for the central idea of this thesis. I would propose the following 
-claim: any generalizable theory about cause and effect cannot be obtained by purely 
+claim: any generalizable theory about cause and effect cannot be obtained purely from 
 empirical studies. That is, no empirical study or experiment, no matter how well
 they are designed, could serve the purpose to identify the nature of things 
 (the generalizable and reproducible chain of cause and effect); 
@@ -122,15 +122,15 @@ The cause and effect of a vaccine are established, firstly by understanding the
 theories of how vaccine could possibly work, and secondly by subjecting this 
 understanding to a rigorous test. 
 Theories are human device based on facts, but are not equivalent to facts;
-they are generalizable statement about how things could possibly work. 
+they are generalizable statement about how things possibly work. 
 Theories can never be fully proved by experiments because that would require 
 infinite number of tests in all possible occasions. However,
 experiments can falsify theories if theories do not predict the results consistent 
 with empirical facts. 
-Needless to say, human progress is about discovering new theories and mechanism
+Needless to say, human progress is mainly about discovering new theories and mechanism
 (e.g. mRNA could stimulate immune response). 
 Experiments or empirical studies are indispensable part of the research but they 
-themselves do not contribute to human understanding of the nature of the problem.
+themselves do not contribute to human understanding of the nature of a problem.
 
 As a second example, 
 the empirical study that finds one more year education increases job market income
@@ -138,7 +138,7 @@ by 7% tells no more than the fact itself.
 No valuable advice could be given to young people or their educators simply based 
 on this result unless we understand how education shapes personal life and 
 what kind of education one needs for successful career. 
-A good educator is able to nurture talents reproducibly, not because he has 
+A good educator is able to nurture talents reproducibly, not because he has the
 knowledge of the empirical result, but because he understands how education works. 
 The empirical study only makes sense in so far as statistical concerns.
 It is not the causality that we value the most which reveal the nature of things.
@@ -150,12 +150,12 @@ career development.
 These two examples should make my point clear. 
 The generalizable knowledge of cause and effect, regarding the mechanism of 
 how things work, which can be utilized to produce desirable results, typically
-require a higher level of understanding and theorization, not directly obtained
-from empirical facts.
+require a higher level of understanding and theorization, which is not directly 
+obtained from empirical facts.
 
 In the light of the above discussion, the difference between cross-section and 
 time series methods, or micro and macro empirical studies, are largely misleading. 
-It is misleading to believe the rigorously designed micro empirical studies
+It is misleading to believe the rigorously designed micro experiments
 identify causal effect while the loosely time series studies provide only 
 correlation. 
 Neither of them reveals the true causal chain, in the sense of generalizable 
@@ -180,7 +180,7 @@ in things like how economic crises happen and how to prevent it.
 To answer these questions, various theories have been developed by the
 great intellectuals in history. 
 Sometimes different theories provide contradictory explanations. 
-For example, Classical School and Keynesian School give different 
+For example, the Classical School and the Keynesian School give different 
 explanations regarding the cause of economic crises. 
 The job of empirical studies is to provide evidence to support which theory 
 is more appropriate. 
@@ -206,16 +206,16 @@ It would be wrong or even dangerous to mistake the "causal effect"
 identified by randomized experiment, which is a variance-inducing factor
 precisely speaking, as the true causality that can be generalized and 
 applied to real applications.
-It would be dull to advise one that wants higher income to finish a PhD 
+It would be dull to advise one who wants higher income to finish a PhD 
 based on the empirical results that more education leads to higher income.
-It would be equally unwise to advice the government that lower interest rate 
+It would be equally unwise to advise the government that lower interest rate 
 will always bring about higher growth, 
 even if we can set up an experiment and rigorously test out that lower 
 interest rate leads to higher GDP growth.
 Such advice can never be made purely based on empirical findings without
 a proper understanding of the nature of economic growth and interest 
 rate and the various mechanisms that link them together.
-In this concern, digging the data to the bottom to find the exact causal 
+To this concern, digging the data to the bottom to find the exact causal 
 factor does not seem rewarding given the required amount of work.
 It is more reasonable to simply acknowledge the historical correlation 
 between interest rate and GDP growth, and leave the rest to theoretical
