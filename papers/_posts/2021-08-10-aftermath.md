@@ -1,0 +1,78 @@
+# Aftermath of financial crisis
+
+> This is a 1-minute summary of Romer and Romer (2017): New Evidence 
+on the Aftermath of Financial Crisis in Advanced Countries
+([link](https://www.aeaweb.org/articles?id=10.1257/aer.20150320))
+
+
+### New series
+
+A new measure of financial distress based on narrative accounts of country 
+conditions in the OECD *Economic Outlook* (1967-2012, 24 countries).
+Coding the severity of financial distress:
+
+1. Credit disruptions: strains in financial markets
+2. Minor crisis: significant problems in the financial sector
+3. Moderate crisis: problems are widespread and severe
+4. Major and extreme financial crisis: large impediments to financial intermediation
+
+Each category is sub-divided into "regular", "minus", and "plus".
+
+
+### The average aftermath
+
+$$
+y_{j,t+i} = 
+\alpha_j^i + \gamma_t^i + \beta^i F_{j,t} + 
+\sum_{k=1}^4 \phi_k^i F_{j,t-k} + 
+\sum_{k=1}^4 \theta_k^i y_{j,t-k} + 
+e_{j,t}^i
+$$
+
+where $$j$$ index countries, $$t$$ index time, $$i=0...10$$ denote horizon.
+$$F_{j,t}$$ is the financial distress measure.
+Assume economic activity is affected by financial distress contemporaneously,
+but distress is not affect by economic activity contemporaneously.
+
+Impulse response result:
+
+- Average GDP decline 5 percent
+- Average industrial production decline 2 percent
+- Average unemployment rise 2 percent
+
+The average aftermath of a financial crisis is medium-sized, bad but nor terrible.
+
+Robustness checks:
+
+- Compare with results using alternative chronologies
+- Feasible GLS: used OLS residuals as weighting matrix
+- Alternative treatment of contemporaneous correlation
+
+
+### Variation in the aftermath of crisis
+
+Outliers and sensitivity:
+
+- Most extreme observations come from smaller or less advanced economies
+- The GDP decline after a crisis in the pre-2007 period is decidedly smaller
+- Excluding individual countries may alter the result significantly
+
+Depth and heterogeneity in key episodes:
+
+$$
+y_{j,t+i} = 
+\alpha_j^i + \gamma_t^i + \beta^i F_{j,t} + 
+\left(\sum_{k=-4}^{i} \phi_k^i F_{j,t+k}\right) + 
+\sum_{k=1}^4 \theta_k^i y_{j,t-k} + 
+e_{j,t}^i
+$$
+
+- Forecast GDP using only past values in episodes of distress, calculate
+  forecasting error with regard to actual GDP: there are tremendous variation
+  in the forecasting errors. More often the aftermath is mild, but sometimes
+  horrific.
+- Including the severity of distress in the forecasting: the more severe
+  the distress, the worse the outcome. This accounts for half of the 
+  heterogeneity.
+- Nonlinearity of distress effect: replace $$F$$ with $$f(F)=F+bF^2$$.
+  The results are very similar to linear models. 
