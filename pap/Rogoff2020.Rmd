@@ -1,0 +1,93 @@
+---
+title: "Peak China Housing"
+author: "Kenneth S. Rogoff and Yuanchen Yang"
+date: "August 2020 @ NBER"
+output: 
+  ioslides_presentation:
+    widescreen: false
+    smaller: true
+---
+
+## Content
+
+### Real estate boom
+
+- Average housing price growth 
+- Housing price by city tier
+- Home price-to-income ratio
+
+### Real estate and the economy
+
+- Real estate share of GDP
+- Real estate investment to GDP
+- Contribution of real estate and construction to employment
+- Land financing to local government revenue
+- Valuation of different asset classes
+
+## Content
+
+### Demand
+
+- House price-to-income ratios
+- Household leverage ratios
+- Home ownership ratio
+- Average residential space per person
+- Proportion of new home buyers
+- Proportion of housing by year of construction
+
+### Supply
+
+- Housing unsold/sold
+- Housing inventory
+- Residential floor space growth rate
+- Housing vacancy rates 
+- Rent to price ratio
+
+
+## ![](fig1.png){width=100%}
+
+## ![](fig2.png){width=100%}
+
+## ![](fig3.png){width=100%}
+
+## ![](fig4.png){width=100%}
+
+## ![](fig5.png){width=100%}
+
+## ![](fig6.png){width=100%}
+
+## ![](fig7.png){width=100%}
+
+## ![](fig8.png){width=100%}
+
+## ![](fig9.png){width=100%}
+
+## ![](fig10.png){width=100%}
+
+## ![](fig11.png){width=100%}
+
+## ![](fig12.png){width=100%}
+
+## ![](fig13.png){width=100%}
+
+## ![](fig14.png){width=100%}
+
+## ![](fig15.png){width=100%}
+
+## ![](fig16.png){width=100%}
+
+## ![](fig17.png){width=100%}
+
+## ![](fig18.png){width=100%}
+
+## ![](fig19.png){width=100%}
+
+## ![](fig20.png){width=100%}
+
+## ![](fig21.png){width=100%}
+
+## ![](fig22.png){width=100%}
+
+## ![](fig23.png){width=100%}
+
+## ![](fig24.png){width=100%}
