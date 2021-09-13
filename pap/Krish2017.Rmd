@@ -19,7 +19,7 @@ with bank runs, credit crunch as well as output contraction.
 Normalizing the spreads: dividing the credit spread by the average spread for 
 that country: $s_{i,t}=Spread_{i,t}/\overline{Spread_i}$
 
-### Crisis and aftermath
+**Crisis and aftermath**
 
 Insights from event study:
 
