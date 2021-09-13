@@ -33,7 +33,7 @@ menu:
   - title: EN
     url: /
   - title: 中文
-    url: /articles.html
+    url: /zh-cn.html
 post_footer: "推荐文章"
 
 # use heading as the title instead of front matter
