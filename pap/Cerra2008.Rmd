@@ -1,0 +1,48 @@
+---
+title: 'Growth Dynamics: The Myth of Economic Recovery'
+author: "Valerie Cerra and Sweta Chaman Saxena"
+date: "March 2008 @ AER"
+output: 
+  html_document:
+    theme: paper
+---
+
+This paper documents the permanent output loss due to financial crisis or politial turmoil.
+
+**Data and measures**
+
+- GDP: World Bank's World Development Indicators (WDI); Penn World Tables
+- Currency crisis measures: exchange market pressure index (currency depreciation + loss in foreign reserves)
+- Banking crisis measures: Caprio and Klingebiel (2003); Kaminsky and Reinhart (1999)
+- Civil war measures: Sarkees (2000) Correlates of War Intra-State War Data, 1816-1997
+- Quality of government: Polity International IV dataset
+
+
+**Specifications**
+
+1. Crisis is contemporaneously exogenous to output growth, no feedback from previous output to a crisis
+
+$$ g_{it} = \alpha_i + \sum_{j=1}^{4}\beta_j g_{i,t-j} + \sum_{s=0}^{4}\delta_s D_{i,t-s} +\epsilon_{it} \tag{1} $$
+
+2. Output growth is contemporaneously exogenous to the crisis, and crisis has only a lagged effect on output ($\delta_0=0$)
+
+$$ g_{it} = \alpha_i + \sum_{j=1}^{4}\beta_j g_{i,t-j} + \sum_{s=1}^{4}\delta_s D_{i,t-s} +\epsilon_{it} \tag{2}$$
+
+3. Crisis is contemporaneously exogenous to output growth, and allow feedback from previous output growth to the current probability of a crisis.
+In addition to Equation (1), there is 
+
+$$ Pr(D_{it}=1) = F(\mu + \sum_{j=1}^{4}\gamma_j g_{i,t-j} + \sum_{s=1}^{4}\phi_s D_{i,t-s} + \nu_{it}) \tag{3}$$
+
+**Impulse responses**
+
+The impulse response of output to each type of shock estimated with Specification (1), 
+annual observations from 190 countries from 1960 to 2001.
+
+![](fig3.png){width=60%}
+![](fig4.png){width=60%}
+![](fig5.png){width=60%}
+![](fig6.png){width=60%}
+![](fig7.png){width=60%}
+
+
+© Original paper: [download](https://www.aeaweb.org/articles?id=10.1257/aer.98.1.439)
