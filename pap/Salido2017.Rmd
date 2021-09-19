@@ -1,0 +1,162 @@
+---
+title: "Credit-market sentiment and the business cycle"
+author: "David Lopez-Salido, Jeremy C. Stein, and Egon Zakrajsek"
+date: "May 2017 @ QJE"
+output: 
+  html_document:
+    theme: paper
+---
+
+**Key idea**: credit-market sentiment (proxied by credit spread) predicts real 
+economic fluctuations. 
+
+#### Theories of the credit cycle
+
+**Theories based on financial frictions**
+
+Given frictions in the debt market, there exists positive feedback between 
+net worth and borrowing constraints that generate credit cycles. 
+
+* There are externalities in leverage choice: Individual agents do not fully 
+internalize the vulnerabilities that their own borrowing decisions impose on 
+the aggregate economy, and so they overborrow from the perspective of a social 
+planner. Therefore, leverage as a state variable captures the fragility of 
+the economy. 
+
+**Behavioral theories**
+
+The psychological model of belief formation is inherently extrapolative, 
+which leads to overoptimism that only waits to be disappointed later on. 
+
+**Integrated view**
+
+Theories based on financial frictions explain the propagation and amplification 
+of credit cycles, but do not endogenously explain what triggers a downturn nor 
+the duration of the cycle. While behavioral theories provide an endogenous 
+explanation of reversion of the cycle. 
+
+#### Measuring credit-market sentiment
+
+Credit spreads: long-term Baa-rated bonds yields - Treasury security yields
+
+Junk-bond share: share of junk bond issuance to total issuance
+
+Excess bond premium (EBP): a measure of credit spreads net of default risk
+
+Measuring stock-market sentiment: Shiller's cyclically adjusted PE ratio
+
+
+#### Financial-market sentiment and economic activity
+
+**Simple OLS** 
+
+\[\begin{aligned}
+\Delta y_t = & \beta_1\Delta s_{t-1} + & \beta_2 r_{t-1}^{SP} + & \mathbf{\gamma' x_{t-1}}\\
+             &-2.061^{**}              &0.029 & \\
+\end{aligned}\]
+
+Alternative interpretations:
+
+1. Forward-looking credit spreads and stock prices anticipate economic changes.
+2. Past sentiment unwinds and reverses itself, which leads to tightened credit 
+   and reduced economic activities.
+   
+**2SLS method**
+
+1. Forecast credit spread change ($\Delta s_t$) with past high-yield share
+($\text{HYS}_{t-2}$) and credit spread ($s_{t-2}$). 
+2. Forecast change in economic variables ($\Delta y_{t+h}$) with estimated
+$\Delta\hat s_t$.
+
+The 2SLS estimates the impact on economic activity of the component of credit-
+spread changes driven by a reversal of prior sentiment. 
+
+\[\begin{aligned}
+\Delta\hat s_t = & \theta_1 s_{t-2} + & \theta_2\ln\text{HYS}_{t-2} & \\
+                 & 0.095^{***}        & -0.248^{***}  &  \\
+\hat r^{SP}_t = & \theta_3 \ln(P/E10)_{t-2}  & \\
+                & -0.134^{***} &  \\
+\end{aligned}\tag{1}\]
+
+\[\begin{aligned}
+\Delta y_{t+h} = & \beta_1\Delta\hat s_{t-1} + & \beta_2\hat r_{t-1}^{SP} + 
+                 & \mathbf{\gamma' x_{t-1}} &  \\
+                 & -4.800^{***} & 0.069 & \\
+\end{aligned}\tag{2}\]
+
+There is a clear separation between sentiment in the credit market and sentiment
+in the stock market: any forecasting power the stock market has for the real 
+economy arises primarily from its role as a passive predictor, rather than from 
+any causal impact of stock-market sentiment.
+
+
+**Outliers and subsample stability**
+
+Checking with a rolling sample with a 40-year window, the Great Depression
+significantly drives down the estimates; the estimates have been remarkably 
+stable in the postwar period.
+
+**Different horizons and measures of economic activity**
+
+Extend forecast horizons for $h=1,2$. 
+Other dependent variables: business fixed investment, residential investment, 
+durable goods consumption, unemployment rate, etc. 
+All report negative coefficients. 
+
+**Additional indicators of credit-market sentiment**
+
+Forecast $\Delta\hat s_t$ with the level of term spread, excess bond premium
+(EBP). The results are robust. 
+
+**Asymmetries: overheating versus overcooling**
+
+Allow for different coefficients on credit-spread increases ($\Delta s^{(+)}_{t-1}$) 
+and decreases ($\Delta s^{(-)}_{t-1}$).
+The magnitude of the contraction following an increase in credit-spread is 
+larger than the magnitude of the boom following a decrease in credit-spread. 
+But the estimates are not robust. 
+
+**Comparison with balance-sheet measures of leverage**
+
+Include $\Delta\hat s_t$ together with five-year change of bank credit,
+bank loans, private nonfinancial credit to GDP, nonfinancial business credit
+to GDP, household credit to GDP, debt to asset ratio for nonfinancial corporate
+sector.
+Credit-market sentiment holds up well in competition with the balance sheet 
+variables.
+
+* The half-life of credit=market sentiment (<2 years) is much shorter than 
+balance-sheet variables (4-7.5 years). The short data range might not well 
+capture the effect of balance-sheet variables.
+
+**Interactive effects**
+
+The vulnerabilities-plus-triggers framework suggests an interactive specification.
+Interact credit-market sentiment with balance-sheet measures. 
+The impact of $\Delta\hat s_t$ is stronger in magnitude when leverage is high. 
+
+#### Exploring the mechanism
+
+1. Overoptimistic sentiment tends to reverse itself, which leads to a widening 
+   of credit spread and a reduction in credit supply. 
+2. Overoptimism leads to overinvestment in some sectors, which makes the economy
+   vulnerable to a downturn (in this case credit demand shrinks). 
+   
+**Evidence from the corporate financing mix**
+
+If sentiment-reversion reduces the credit supply, we would observe a reduction
+in debt issuance but an increase in equity issuance. 
+It is unlikely overinvestment would lead to a change in corporate financing mix.
+The evidence confirms this: a forecasted widening of credit spread is associated
+with a subsequent decrease in debt issuance and an increase in equity issuance.
+
+**Investment behavior of firms by rating category**
+
+The credit supply channel will affect the capital expenditure of firms with 
+lower credit ratings more than the firms with higher ratings. 
+This is also consistent with the findings. 
+
+© Original paper: [download](https://doi.org/10.1093/qje/qjx014)
+
+
+
