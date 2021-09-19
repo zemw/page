@@ -39,10 +39,5 @@ The impulse response of output to each type of shock estimated with Specificatio
 annual observations from 190 countries from 1960 to 2001.
 
 ![](fig3.png){width=60%}
-![](fig4.png){width=60%}
-![](fig5.png){width=60%}
-![](fig6.png){width=60%}
-![](fig7.png){width=60%}
-
 
 © Original paper: [download](https://www.aeaweb.org/articles?id=10.1257/aer.98.1.439)
