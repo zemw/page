@@ -1,0 +1,94 @@
+---
+title: "Banking crisis without panics"
+author: "Matthew Baron, Emil Verner, Wei Xiong"
+date: "Feburary 2021 @ QJE"
+header-includes:
+    - \usepackage{bm}
+output: 
+  html_document:
+    theme: paper
+---
+
+#### Two theories of banking crisis
+
+1. Depositor crisis: depositors claim their deposits from banks that banks 
+   failed to honor (liquidity crisis)
+2. Capital crisis: adverse shocks (asset losses) impair bank equity and 
+   constrain bank's capacity to finance the economy (solvency crisis)
+   
+This paper uses bank equity returns to study banking crisis:
+
+1. Bank equity has the lowest payoff priority, therefore equity returns are 
+   sensitive to bank losses.
+2. Bank equity returns provide an objective real-time measure not subject to 
+   lookback biases.
+3. Bank equity returns capture "quiet" crises that involve no panics and are 
+   hard to detect otherwise.
+   
+#### Data
+
+1. Annual bank and nonbank stock returns date back to 1870.
+2. Monthly series in a three-years window around each crisis episode:
+   stock returns, credit spreads.
+3. Narrative accounts of crises defined by other authors. 
+
+#### Emprical results
+
+**Are large bank equity decline associated with adverse macroeconomic consequence?**
+
+$$
+\Delta_h y_{i,t+h} = \alpha_{i}^h + \sum_j\beta_j^h\mathbb{1}[r_{i,t}^B \in B_j]
++ \sum_j\delta_j^h\mathbb{1}[r_{i,t}^N \in B_j] + \Gamma^hX_{it} + \epsilon_{it}^h
+$$
+
+$r_{i,t}^B$: return of bank stocks; $r_{i,t}^N$: return of nonbank stocks;
+$B_j$: bins of stock returns: -45%, -30%, -15%,...; 
+$X_{it}$: lags of GDP growth, credit-to-GDP change, lags of equity returns. 
+Result: declines in bank equity of greater than 45% predict 3.6% lower output
+after three years. 
+
+Why do bank equity declines predict lower future GDP growth? Bank-lending channel.
+Repeat the above model with credit-to-GDP as dependent variable: bank equity 
+decline of over 45% predicts a 12ppt decline in credit-to-GDP.
+
+**Are panics necessary for banking crisis to have severe economic consequence?**
+
+Not all bank equity crashes necessarily involve panics. Classify each episode as
+"panic" or "nonpanic".
+
+$$
+\Delta_h y_{i,t+h} = \alpha_{i}^h + \beta_1^h\mathbb{1}[r_{i,t}^B \leq\theta]
++\beta_2^h \text{Panic}_{i,t} + \beta_3^h\mathbb{1}[r_{i,t}^B \leq\theta]\times 
+\text{Panic}_{i,t} + \Gamma^hX_{it} + \epsilon_{it}^h
+$$
+
+![Impulse response of real GDP growth](/Users/zwang/Desktop/pic.jpg){width=50%}
+
+What if equity market crash due to sentiment but not fundamental changes?
+Refine the sample to only those periods with narrative evidence of widespread
+bank failures. The results are similar.
+
+Conclusion: though panics are important amplification mechanism, panics are not
+necessary for banking crises to have severe economic consequences.
+
+#### Relative timing of bank equity crashes
+
+Bank equity crashes before other indicators:
+
+- 7.46 months before panic
+- 2.85 months before earliest narrative starts
+- 3.44 months before 1% spike in bank credit spread
+- 4.26 months before 1% spike in corp credit spread
+- 1.94 months before nonfinancial equity crash
+
+#### Conclusion
+
+1. Bank equity is particularly informative about severe negative macroeconomic 
+   events involving a decline in intermediate credit.
+2. Banking crisis may occur when banks are under-capitalized and their ability
+   to lend is severely impaired, even when panics by bank creditors are prevented.
+3. The importance of timely recapitalization of bank capital during early phases 
+   of banking distress, rather than having policies simply backstop liquidity.
+   
+
+© Original paper: [download](https://doi.org/10.1093/qje/qjaa034)
