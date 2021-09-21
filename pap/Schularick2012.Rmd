@@ -1,0 +1,103 @@
+---
+title: 'Credit Booms Gone Bust: Monetary Policy, Leverage Cycles, and Financial Crises'
+author: "Moritz Schularick and Alan M. Taylor"
+date: "April 2012 @ AER"
+output: 
+  html_document:
+    theme: paper
+---
+
+#### The role of money and credit in macroeconomics
+
+1. Money view: Friedman and Schwartz (1963)
+2. Credit view: Mishkin (1978), Bernanke (1983), Gertler (1988)
+    i. Passive credit: credit as an enhancement mechanism (financial accelerator effect)
+    ii. Endogenous credit cycles: financial system itself generate booms and busts (Minsky's view)
+
+#### Two eras of financial capitalism
+
+1. 1870-1939: money and credit maintained a roughly stable relationship to each other.
+2. 1945-Now: credit decoupled from broad money
+    i. Shift away from gold to fiat money, the greater role of activist macroeconomic
+       policies, the greater bank supervision and deposit insurance, the expanded
+       role of the lender of last resort.
+    ii. Banks use new sources of funding, mainly debt securities, creating more 
+        and more nonmonetary bank liabilities.
+    iii. Banking stability can no longer rest on the foundations of deposit 
+         issuance alone, with the lender of last resort now having to confront
+         wholesale (non-deposit) bank runs.
+         
+**Event analysis**
+
+1. In postwar era, irregular deleveraging of the financial sector was avoid,
+aggregate money and loan growth remained relatively high.
+2. Total bank assets, which rely on nonmoney funding to a greater extent, 
+have actually become more volatile in the postwar era.
+3. Despite the much more aggressive policy response, the cumulative real effects
+have been even somewhat stronger in the postwar period. In the earlier decades,
+the financial sector played a less central role, and financial crises were less
+costly. 
+4. Recessions after WW2 have become less frequent, but not less severe. 
+
+#### Credit booms and financial crisis
+
+Does a country's recent history of credit growth help predict a financial crisis?
+
+$$
+\text{logit}(\text{CRISIS}_{it}=1) = 
+b_{0i} + b_1(L)\log\text{CREDIT}_{it} + b_2(L) X_{it} + \epsilon_{it}
+$$
+
+$X_{it}$ includes real GDP growth, inflation rate, interest rate, investment/GDP.
+
+**Receiver Operating Characteristic (ROC)**
+
+True Positive Rate (Sensitivity): 
+
+$$\text{TPR} = \frac{\text{True Positive}}{\text{Actual Positive}}$$
+
+False Positive Rate (Fall-out):
+
+$$\text{FPR} = \frac{\text{False Positive}}{\text{Actual Negative}}
+  = 1 - \frac{\text{True Negative}}{\text{Actual Negative}} = 1-\text{TNR}
+$$
+
+Binary classifier: $I(\hat p - \theta > 0)$, $\hat p$ is the estimated probability
+of crisis, $\theta$ is a varying threshold. 
+$\theta\to 0$, the classifier is aggressive, TPR$\to 1$, TNR$\to 0$.
+$\theta\to 1$, the classifier is conservative, TPR$\to 0$, TNR$\to 1$.
+
+```{r, out.width="50%", fig.align='center', echo=FALSE}
+knitr::include_graphics(path.expand("~/Desktop/fig.jpg"))
+```
+
+**Conclusion: credit matters, not money.** 
+
+#### Robustness checks
+
+1. The role of asset price: possible feedback loop between asset values and lending reserves
+    i. Stock price per se pose financial stability risk? -- Inclusion of lags of stock prices,
+    their overall contribution is very small.
+    ii. Asset price boom accompanied by increasing leverage? -- Inclusion of interaction terms,
+    the odds of financial crises increase.
+    
+$$
+\text{logit}(p_{it}) \sim \Delta_5\log\text{Loan}_{it} + \Delta_5\log\text{Stock}_{it}
++ \Delta_5\log\text{Loan}_{it} \times \Delta_5\log\text{Stock}_{it}
+$$
+    
+2. Crisis probabilities grow as financial depth grows. 
+Inclusion of credit-to-GDP has positive coefficient.
+More complex financial systems are inherently more risky.
+
+#### Conclusion
+
+1. The analysis lends support to the idea that financial crisis can be viewed
+as "credit booms gone wrong".
+2. Historical evidence suggests that credit has a constructive role to play in
+central bank policy.
+3. The evidence raises the possibility that the fianncial sector is quite capable
+of creating its own shocks.
+
+
+© Original paper: [download](https://doi.org/10.1257/aer.102.2.1029)
