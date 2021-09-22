@@ -176,9 +176,7 @@ pre code {
 <h4>Theories of the credit cycle</h4>
 <p><strong>Theories based on financial frictions</strong></p>
 <p>Given frictions in the debt market, there exists positive feedback between net worth and borrowing constraints that generate credit cycles.</p>
-<ul>
-<li>There are externalities in leverage choice: Individual agents do not fully internalize the vulnerabilities that their own borrowing decisions impose on the aggregate economy, and so they overborrow from the perspective of a social planner. Therefore, leverage as a state variable captures the fragility of the economy.</li>
-</ul>
+<p>*There are externalities in leverage choice: Individual agents do not fully internalize the vulnerabilities that their own borrowing decisions impose on the aggregate economy, and so they overborrow from the perspective of a social planner. Therefore, leverage as a state variable captures the fragility of the economy.</p>
 <p><strong>Behavioral theories</strong></p>
 <p>The psychological model of belief formation is inherently extrapolative, which leads to overoptimism that only waits to be disappointed later on.</p>
 <p><strong>Integrated view</strong></p>
@@ -194,10 +192,12 @@ pre code {
 <div id="financial-market-sentiment-and-economic-activity" class="section level4">
 <h4>Financial-market sentiment and economic activity</h4>
 <p><strong>Simple OLS</strong></p>
-<p><span class="math display">\[\begin{aligned}
-\Delta y_t = &amp; \beta_1\Delta s_{t-1} + &amp; \beta_2 r_{t-1}^{SP} + &amp; \mathbf{\gamma&#39; x_{t-1}}\\
-             &amp;-2.061^{**}              &amp;0.029 &amp; \\
-\end{aligned}\]</span></p>
+<p><span class="math display">\[
+\begin{array}{llll}
+\Delta y_t = &amp; \beta_1\Delta s_{t-1} + &amp; \beta_2 r_{t-1}^{SP} + &amp; \mathbf{\gamma&#39; x_{t-1}} + \epsilon_t\\
+             &amp; -2.061^{**}             &amp; 0.029  
+\end{array}
+\]</span></p>
 <p>Alternative interpretations:</p>
 <ol style="list-style-type: decimal">
 <li>Forward-looking credit spreads and stock prices anticipate economic changes.</li>
@@ -209,17 +209,22 @@ pre code {
 <li>Forecast change in economic variables (<span class="math inline">\(\Delta y_{t+h}\)</span>) with estimated <span class="math inline">\(\Delta\hat s_t\)</span>.</li>
 </ol>
 <p>The 2SLS estimates the impact on economic activity of the component of credit- spread changes driven by a reversal of prior sentiment.</p>
-<p><span class="math display">\[\begin{aligned}
-\Delta\hat s_t = &amp; \theta_1 s_{t-2} + &amp; \theta_2\ln\text{HYS}_{t-2} &amp; \\
-                 &amp; 0.095^{***}        &amp; -0.248^{***}  &amp;  \\
-\hat r^{SP}_t = &amp; \theta_3 \ln(P/E10)_{t-2}  &amp; \\
-                &amp; -0.134^{***} &amp;  \\
-\end{aligned}\tag{1}\]</span></p>
-<p><span class="math display">\[\begin{aligned}
-\Delta y_{t+h} = &amp; \beta_1\Delta\hat s_{t-1} + &amp; \beta_2\hat r_{t-1}^{SP} + 
-                 &amp; \mathbf{\gamma&#39; x_{t-1}} &amp;  \\
-                 &amp; -4.800^{***} &amp; 0.069 &amp; \\
-\end{aligned}\tag{2}\]</span></p>
+<p><span class="math display">\[
+\begin{array}{llll}
+\Delta\hat s_t = &amp; \theta_1 s_{t-2}  &amp;+ \theta_2\ln\text{HYS}_{t-2} &amp;+ u_t \\
+                 &amp; 0.095^{***}       &amp; -0.248^{***}    \\
+\hat r^{SP}_t = &amp; \theta_3 \ln(P/E10)_{t-2} &amp; &amp;+ v_t \\
+                &amp; -0.134^{***}   \\
+\end{array}
+\tag{1}
+\]</span></p>
+<p><span class="math display">\[
+\begin{array}{llll}
+\Delta y_{t+h} = &amp; \beta_1\Delta\hat s_{t-1} + &amp; \beta_2\hat r_{t-1}^{SP} + &amp; \mathbf{\gamma&#39; x_{t-1}} +\epsilon_t  \\
+                 &amp; -4.800^{***}                &amp; 0.069 
+\end{array}
+\tag{2}
+\]</span></p>
 <p>There is a clear separation between sentiment in the credit market and sentiment in the stock market: any forecasting power the stock market has for the real economy arises primarily from its role as a passive predictor, rather than from any causal impact of stock-market sentiment.</p>
 <p><strong>Outliers and subsample stability</strong></p>
 <p>Checking with a rolling sample with a 40-year window, the Great Depression significantly drives down the estimates; the estimates have been remarkably stable in the postwar period.</p>
@@ -231,9 +236,7 @@ pre code {
 <p>Allow for different coefficients on credit-spread increases (<span class="math inline">\(\Delta s^{(+)}_{t-1}\)</span>) and decreases (<span class="math inline">\(\Delta s^{(-)}_{t-1}\)</span>). The magnitude of the contraction following an increase in credit-spread is larger than the magnitude of the boom following a decrease in credit-spread. But the estimates are not robust.</p>
 <p><strong>Comparison with balance-sheet measures of leverage</strong></p>
 <p>Include <span class="math inline">\(\Delta\hat s_t\)</span> together with five-year change of bank credit, bank loans, private nonfinancial credit to GDP, nonfinancial business credit to GDP, household credit to GDP, debt to asset ratio for nonfinancial corporate sector. Credit-market sentiment holds up well in competition with the balance sheet variables.</p>
-<ul>
-<li>The half-life of credit=market sentiment (&lt;2 years) is much shorter than balance-sheet variables (4-7.5 years). The short data range might not well capture the effect of balance-sheet variables.</li>
-</ul>
+<p>*The half-life of credit=market sentiment (&lt;2 years) is much shorter than balance-sheet variables (4-7.5 years). The short data range might not well capture the effect of balance-sheet variables.</p>
 <p><strong>Interactive effects</strong></p>
 <p>The vulnerabilities-plus-triggers framework suggests an interactive specification. Interact credit-market sentiment with balance-sheet measures. The impact of <span class="math inline">\(\Delta\hat s_t\)</span> is stronger in magnitude when leverage is high.</p>
 </div>

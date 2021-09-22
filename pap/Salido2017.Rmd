@@ -17,7 +17,7 @@ economic fluctuations.
 Given frictions in the debt market, there exists positive feedback between 
 net worth and borrowing constraints that generate credit cycles. 
 
-* There are externalities in leverage choice: Individual agents do not fully 
+*There are externalities in leverage choice: Individual agents do not fully 
 internalize the vulnerabilities that their own borrowing decisions impose on 
 the aggregate economy, and so they overborrow from the perspective of a social 
 planner. Therefore, leverage as a state variable captures the fragility of 
@@ -50,10 +50,12 @@ Measuring stock-market sentiment: Shiller's cyclically adjusted PE ratio
 
 **Simple OLS** 
 
-\[\begin{aligned}
-\Delta y_t = & \beta_1\Delta s_{t-1} + & \beta_2 r_{t-1}^{SP} + & \mathbf{\gamma' x_{t-1}}\\
-             &-2.061^{**}              &0.029 & \\
-\end{aligned}\]
+\[
+\begin{array}{llll}
+\Delta y_t = & \beta_1\Delta s_{t-1} + & \beta_2 r_{t-1}^{SP} + & \mathbf{\gamma' x_{t-1}} + \epsilon_t\\
+             & -2.061^{**}             & 0.029  
+\end{array}
+\]
 
 Alternative interpretations:
 
@@ -71,18 +73,23 @@ $\Delta\hat s_t$.
 The 2SLS estimates the impact on economic activity of the component of credit-
 spread changes driven by a reversal of prior sentiment. 
 
-\[\begin{aligned}
-\Delta\hat s_t = & \theta_1 s_{t-2} + & \theta_2\ln\text{HYS}_{t-2} & \\
-                 & 0.095^{***}        & -0.248^{***}  &  \\
-\hat r^{SP}_t = & \theta_3 \ln(P/E10)_{t-2}  & \\
-                & -0.134^{***} &  \\
-\end{aligned}\tag{1}\]
+\[
+\begin{array}{llll}
+\Delta\hat s_t = & \theta_1 s_{t-2}  &+ \theta_2\ln\text{HYS}_{t-2} &+ u_t \\
+                 & 0.095^{***}       & -0.248^{***}    \\
+\hat r^{SP}_t = & \theta_3 \ln(P/E10)_{t-2} & &+ v_t \\
+                & -0.134^{***}   \\
+\end{array}
+\tag{1}
+\]
 
-\[\begin{aligned}
-\Delta y_{t+h} = & \beta_1\Delta\hat s_{t-1} + & \beta_2\hat r_{t-1}^{SP} + 
-                 & \mathbf{\gamma' x_{t-1}} &  \\
-                 & -4.800^{***} & 0.069 & \\
-\end{aligned}\tag{2}\]
+\[
+\begin{array}{llll}
+\Delta y_{t+h} = & \beta_1\Delta\hat s_{t-1} + & \beta_2\hat r_{t-1}^{SP} + & \mathbf{\gamma' x_{t-1}} +\epsilon_t  \\
+                 & -4.800^{***}                & 0.069 
+\end{array}
+\tag{2}
+\]
 
 There is a clear separation between sentiment in the credit market and sentiment
 in the stock market: any forecasting power the stock market has for the real 
@@ -125,7 +132,7 @@ sector.
 Credit-market sentiment holds up well in competition with the balance sheet 
 variables.
 
-* The half-life of credit=market sentiment (<2 years) is much shorter than 
+*The half-life of credit=market sentiment (<2 years) is much shorter than 
 balance-sheet variables (4-7.5 years). The short data range might not well 
 capture the effect of balance-sheet variables.
 
