@@ -7,8 +7,10 @@ layout: default
   <div class="posts-by-category">
     <h2>// my research</h2>
     <ul class="posts">
-      <li><span>2020-11-02</span> &raquo; <a href="{{site.baseurl}}/rse/bri.pdf">Assessing the Impact of the Belt and Road Initiative [PDF]</a></li>
-    </ul>
+      {% for post in site.categories.rse -%}
+        <li><span>{{ post.date | date: "%Y-%m-%d"  }}</span> &raquo; <a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></li>
+      {% endfor %}
+  </ul>
   </div>
 
   <div class="posts-by-category">
